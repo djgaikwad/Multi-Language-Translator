@@ -15,7 +15,7 @@ This is a **Flask-based multilingual translation app** powered by the **Hugging 
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/multilingual-translator.git
+git clone https://github.com/djgaikwad/Multi-language-translator.git
 cd multilingual-translator
 ```
 
