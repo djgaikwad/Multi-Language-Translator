@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+            width: 50%;
+            margin: auto;
+        }
+        select, textarea, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Translation App</h1>
+        <form method="POST">
+            <textarea name="text" rows="3" cols="50" placeholder="Enter text here..." required></textarea><br>
+
+            <h3>Source Language:</h3>
+            <select name="source_lang">
+                {% for lang in lang_codes %}
+                <option value="{{ lang }}">{{ lang }}</option>
+                {% endfor %}
+            </select>
+
+            <h3>Target Language:</h3>
+            <select name="target_lang">
+                {% for lang in lang_codes %}
+                <option value="{{ lang }}">{{ lang }}</option>
+                {% endfor %}
+            </select><br>
+
+            <button type="submit">Translate</button>
+        </form>
+    </div>
+</body>
+</html>

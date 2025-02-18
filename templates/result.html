@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+            width: 50%;
+            margin: auto;
+        }
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        button {
+            padding: 10px;
+            margin: 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Translation Result</h1>
+        <div id="output">
+            <p><strong>Source Language ({{ source_lang }}):</strong></p>
+            <p>{{ text }}</p>
+
+            <p><strong>Target Language ({{ target_lang }}):</strong></p>
+            <p>{{ translated_text }}</p>
+        </div>
+
+        <a href="/"><button>Home</button></a>
+    </div>
+</body>
+</html>
